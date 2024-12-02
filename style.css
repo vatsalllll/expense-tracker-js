@@ -1,0 +1,212 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.2);
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: #000000;
+}
+
+#expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0;
+  border: 1px solid #2fff00;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #000000;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+form select {
+  text-overflow: ellipsis;
+  padding-right: 25px;
+}
+
+form button {
+  background-color: #2fff00;
+  color: #000000;
+  border: 2px solid #2fff00;
+  box-shadow: 0 0 10px rgba(47, 255, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #000000;
+  color: #2fff00;
+  box-shadow: 0 0 20px rgba(47, 255, 0, 0.5);
+}
+
+#expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  display: table;
+  table-layout: fixed;
+}
+
+#expense-table th,
+#expense-table td {
+  border: 1px solid #2fff00;
+  padding: 12px;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  word-wrap: break-word;
+}
+
+#expense-table th {
+  background-color: #2fff00;
+  color: #000000;
+  border: 1px solid #2fff00;
+}
+
+#expense-table th:nth-child(1),
+#expense-table td:nth-child(1) {
+  width: 30%;
+}
+
+#expense-table th:nth-child(2),
+#expense-table td:nth-child(2) {
+  width: 20%;
+}
+
+#expense-table th:nth-child(3),
+#expense-table td:nth-child(3) {
+  width: 25%;
+}
+
+#expense-table th:nth-child(4),
+#expense-table td:nth-child(4) {
+  width: 25%;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 6px 12px;
+  margin: 2px;
+  border: 1px solid #2fff00;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #2fff00;
+  transition: all 0.3s ease;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  background-color: #2fff00;
+  color: #000000;
+  box-shadow: 0 0 10px rgba(47, 255, 0, 0.5);
+}
+
+#total-expenses {
+  margin-bottom: 20px;
+}
+
+#category-totals {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#category-totals li {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid #2fff00;
+  color: #000000;
+}
+
+.chart-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  #expense-table th,
+  #expense-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .delete-btn,
+  .edit-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  #category-totals {
+    flex-direction: column;
+  }
+
+  #category-totals li {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  #expense-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
